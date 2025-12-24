@@ -1,0 +1,7 @@
+.hero {
+    background-image: linear-gradient(var(--aw-background-gradient)), url('~/assets/images/isotipo.svg');
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('~/assets/images/isotipo.svg'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
