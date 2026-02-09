@@ -36,11 +36,10 @@ const metadataDefinition = () =>
         })
         .optional(),
 
-      twitter: z
+      mastodon: z
         .object({
-          handle: z.string().optional(),
-          site: z.string().optional(),
-          cardType: z.string().optional(),
+          statusId: z.string().optional(),
+          instanceUrl: z.string().optional(),
         })
         .optional(),
     })

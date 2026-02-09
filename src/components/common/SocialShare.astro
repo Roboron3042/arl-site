@@ -1,26 +1,32 @@
 ---
 import { Icon } from 'astro-icon/components';
+import type { MetaDataMastodon } from '~/types';
 
 export interface Props {
   text: string;
   url: string | URL;
   class?: string;
+  mastodon?: MetaDataMastodon;
 }
 
-const { text, url } = Astro.props;
+const { text, url, mastodon } = Astro.props;
+
+const mastodonUrl = mastodon?.statusId
+  ? `${mastodon?.instanceUrl ?? 'https://masto.es'}/statuses/${mastodon.statusId}`
+  : `https://mastodonshare.com?text=${text} ${url}`;
 ---
 
 <div class="flex items-center">
-  <span class="align-super font-bold text-slate-500 dark:text-slate-400">Share:</span>
-  <a href={`https://mastodonshare.com?text=${text} ${url}`}  class="ml-2 rtl:ml-0 rtl:mr-2" title="Mastodon Share"
+  <span class="align-super font-bold text-slate-500 dark:text-slate-400">Compartir:</span>
+  <a href={mastodonUrl} class="ml-2 rtl:ml-0 rtl:mr-2" title="Compartir con Mastodon"
     ><Icon
       name="tabler:brand-mastodon"
       class="w-6 h-6 text-gray-400 dark:text-slate-500 hover:text-black dark:hover:text-slate-300"
     />
-</a>
+  </a>
   <button
     class="ml-2 rtl:ml-0 rtl:mr-2"
-    title="Email Share"
+    title="Compartir por correo electrónico"
     data-aw-social-share="mail"
     data-aw-url={url}
     data-aw-text={text}

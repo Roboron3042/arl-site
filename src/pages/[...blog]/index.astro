@@ -12,6 +12,7 @@ import { getStaticPathsBlogPost, blogPostRobots } from '~/utils/blog';
 import { findImage } from '~/utils/images';
 import type { MetaData } from '~/types';
 import RelatedPosts from '~/components/blog/RelatedPosts.astro';
+import MastodonComments from '~/components/blog/MastodonComments.astro';
 
 export const prerender = true;
 
@@ -43,12 +44,22 @@ const metadata = merge(
   },
   { ...(post?.metadata ? { ...post.metadata, canonical: post.metadata?.canonical || url } : {}) }
 ) as MetaData;
+
+// Add variables to extract Mastodon info from frontmatter
+const mastodonStatusId = post.metadata?.mastodon?.statusId;
+const mastodonInstance = post.metadata?.mastodon?.instanceUrl ?? "https://masto.es";
+
 ---
 
 <Layout metadata={metadata}>
   <SinglePost post={{ ...post, image: image }} url={url}>
     {post.Content ? <post.Content /> : <Fragment set:html={post.content || ''} />}
   </SinglePost>
+  {
+    mastodonStatusId && (
+      <MastodonComments statusId={mastodonStatusId} instanceUrl={mastodonInstance} />
+    )
+  }
   <ToBlogLink />
   <RelatedPosts post={post} />
 </Layout>
