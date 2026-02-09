@@ -1,6 +1,7 @@
 ---
 import Image from '~/components/common/Image.astro';
 import Button from '~/components/ui/Button.astro';
+import { twMerge } from 'tailwind-merge';
 import "./hero.css"
 import type { Hero as Props } from '~/types';
 
@@ -55,11 +56,11 @@ const {
           }
           {
             actions && (
-              <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-8 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+              <div class="w-fit m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-8 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
                 {Array.isArray(actions) ? (
                   actions.map((action) => (
-                    <div class="flex w-full sm:w-auto items-center">
-                      <Button {...(action || {})} class="w-full sm:mb-0" />
+                    <div class="flex items-center justify-center">
+                      <Button {...(action || {})} class={twMerge(action.class, "sm:mb-0 justify-center sm:justify-normal whitespace-nowrap")} />
                     </div>
                   ))
                 ) : (
