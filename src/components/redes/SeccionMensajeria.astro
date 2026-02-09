@@ -1,0 +1,26 @@
+---
+import BlogList from '~/components/redes/List.astro';
+import Headline from '~/components/blog/Headline.astro';
+import { redes } from '~/utils/servicios';
+import Note from '~/components/widgets/Note.astro';
+
+const redesMensajeria = redes.filter((r) => r.category === 'mensajeria');
+---
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+    <Headline
+      subtitle="Libera tus comunicaciones de las corporaciones con nuestras redes libres de mensajería recomendadas."
+      >Redes de Mensajería</Headline
+    >
+    <Note
+      title="En ampliación"
+      icon='tabler:alert-triangle'
+      className='mb-12 md:mb-20'
+      description="La Asociación Redes Libres aún no tiene muchas redes libres que ofrecer en esta categoría. Si crees que puedes ayudarnos a ampliar nuestra oferta de redes libres en esta categoría, <a class='hover:underline text-accent' href='/contacto'>ponte en contacto con nosotras</a>."
+    />
+    <BlogList redes={redesMensajeria} />
+    <Note
+      title="Otras redes libres de mensajería segura"
+      icon='tabler:info-square'
+      description="<p>Desde la asociación recomendamos Delta Chat para todas las personas que busquen una red libre de mensajería segura dada su facilidad de uso, pero también existen otras redes como XMPP o Matrix.</p> <p class='mt-4'>XMPP una alternativa viable para personas con cierto perfil tecnológico, pero no podemos recomendar Matrix por problemas de rendimiento y falta de filosofía comunitaria.</p>"
+    />
+  </section>

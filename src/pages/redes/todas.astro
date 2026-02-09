@@ -1,0 +1,17 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import SeccionSociales from '~/components/redes/SeccionSociales.astro';
+import SeccionMensajeria from '~/components/redes/SeccionMensajeria.astro';
+import SeccionNovedades from '~/components/redes/SeccionNovedades.astro';
+
+const metadata = {
+  title: 'Todas nuestras redes libres',
+};
+
+---
+
+<Layout metadata={metadata}>
+  <SeccionSociales />
+  <SeccionMensajeria />
+  <SeccionNovedades />
+</Layout>

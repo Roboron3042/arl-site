@@ -1,0 +1,25 @@
+---
+import BlogList from '~/components/redes/List.astro';
+import Headline from '~/components/blog/Headline.astro';
+import { redes } from '~/utils/servicios';
+import Note from '~/components/widgets/Note.astro';
+
+const redesSociales = redes.filter((r) => r.category === 'microblog' || r.category === 'imagen');
+---
+
+<section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+  <Headline subtitle="Comparte publicaciones, fotos, vídeos y más en las redes libres del Fediverso"
+    >Redes Sociales</Headline
+  >
+  <Note
+    title="⁂ ¿Qué es el Fediverso?"
+    className="mb-12 md:mb-20"
+    description="Todas las redes sociales que ofrecemos forman parte del Fediverso, una red de redes sociales libres. Todas están interconectadas, de forma que puedes publicar una foto en una red de fotografía y comentarla desde una red de microblogging. Aprende más del Fediverso en <a class='hover:underline text-accent' href='https://jointhefediverse.net'>jointhefediverse.net</a>."
+  />
+  <BlogList redes={redesSociales} />
+  <Note
+    title="Otras redes sociales libres del Fediverso hispano"
+    icon="tabler:info-square"
+    description="<p>Todas las redes aquí listadas cuentan con las garantías que la Asociación Redes Libres ofrece a sus usuarias, pero nuestra oferta es actualmente limitada y puede que busques algo diferente. Puedes encontrar otras redes en español en el listado de Niböe, <a class='hover:underline text-accent' href='https://notas.niboe.org/s/6lr2U2myb#'>comunidades fediversales en español</a>.</p>"
+  />
+</section>

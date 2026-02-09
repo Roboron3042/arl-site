@@ -1,0 +1,154 @@
+---
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Note from '~/components/widgets/Note.astro';
+
+const metadata = {
+  title: 'Asociación Redes Libres',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Únete a la ARL',
+        href: '/contacto',
+      },
+      {
+        variant: 'link',
+        text: 'Beneficios de asociarte',
+        href: '/asociacion/beneficios',
+        class: 'justify-center'
+      },
+    ]}
+  >
+    <Fragment slot="title">Asociación Redes Libres</Fragment>
+
+    <Fragment slot="subtitle">
+      La Asociación Redes Libres (ARL) es una asociación sin ánimo de lucro registrada en España con el fin de impulsar las
+      redes libres en este y otros países de habla hispana, para lo cual agrupa a diferentes proveedores de redes libres
+      que comparten los mismos objetivos y valores.
+    </Fragment>
+  </Hero>
+
+  <Steps2
+    title="Objetivos de la asociación"
+    items={[
+      {
+        title: 'Impulsar el uso y la adopción de las redes libres entre la población, instituciones y organizaciones',
+      },
+      {
+        title: 'Facilitar el desarrollo, la gestión y el mantenimiento de las redes libres',
+      },
+      {
+        title: 'Promover la cooperación entre los diferentes proveedores de redes libres',
+      },
+    ]}
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  />
+
+  <!-- callToAction={{
+      text: 'Sigue nuestras actividades en el blog de Redes Libres',
+      href: '/blog',
+      variant: 'link'
+    }} -->
+  <Steps2
+    title="Actividades"
+    subtitle="Para la consecución de sus objetivos, Redes Libres realiza las siguientes actividades"
+    items={[
+      {
+        title: 'Alojamiento de redes libres, tanto propias como en colaboración con terceros',
+        icon: 'tabler:server',
+      },
+      {
+        title: 'Asistencia técnica, legal y financiera a proveedores de redes libres',
+        icon: 'tabler:heart-handshake',
+      },
+      {
+        title: 'Coordinación entre los diferentes proveedores de redes libres',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Eventos para dar a conocer y promover el uso de las redes libres',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Asesoramiento a personas y organizaciones interesadas en las redes libres',
+        icon: 'tabler:help',
+      },
+    ]}
+  />
+
+  <Note description='Sigue las actividades que organizamos en <a href="/blog" class="text-accent hover:underline">el blog de Redes Libres</a>' />
+
+  <Features3
+    title="Nuestros valores"
+    subtitle="La Asociación, las personas asociadas y voluntarias, así como los servicios ofrecidos desde la Asociación se guian por los siguientes principios"
+    columns={2}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Ausencia de la intención de ánimo de lucro',
+        icon: 'tabler:currency-euro-off',
+      },
+      {
+        title: 'Protección de la intimidad y la privacidad de las personas',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Respeto a las personas y las minorías y su no discriminación',
+        icon: 'tabler:gender-transgender',
+      },
+      {
+        title: 'Respeto de los Derechos Humanos reconocidos por las Naciones Unidas',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Empleo de tecnologías libres y normalizaciones tecnológicas',
+        icon: 'tabler:brand-open-source',
+      },
+      {
+        title: 'Priorización de soluciones comunitarias en lugar de soluciones comerciales',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Accesibilidad a todos los servicios para cualquier persona sin importar su nivel económico o funcional',
+        icon: 'tabler:accessible',
+      },
+      {
+        title:
+          'Transparencia pública sobre las finanzas y decisiones de la Asociación y de los servicios ofrecidos por esta',
+        icon: 'tabler:speakerphone',
+      },
+    ]}
+  />
+
+  <Note description='Aprende más sobre como se organiza las asociación en <a href="/asosiacion/estatutos" class="text-accent hover:underline">nuestros estatutos</a>' />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Únete a la ARL',
+        href: '/contacto',
+      },
+      {
+        variant: 'link',
+        text: 'Beneficios de asociarte',
+        href: '/asociacion/beneficios',
+      },
+    ]}
+  >
+    <Fragment slot="title"> Súmate a Redes Libres </Fragment>
+
+    <Fragment slot="subtitle">
+      Si eres proveedor de redes libres o tienes interés en serlo y compartes nuestros objetivos y valores, estaremos
+      encantadas de ayudarte y que te sumes a nosotras para alcanzar nuestros objetivos
+    </Fragment>
+  </CallToAction>
+</Layout>

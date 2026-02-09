@@ -44,6 +44,19 @@ export interface Post {
   readingTime?: number;
 }
 
+export interface Red {
+  id: string;
+  permalink: string;
+  title: string;
+  /** Optional summary */
+  excerpt?: string;
+  summary2?: string;
+  image?: ImageMetadata | string;
+  category?: "microblog" | "imagen" | "mensajeria" | "novedades";
+  tags?: string[];
+  destacada?: boolean;
+}
+
 export interface Taxonomy {
   slug: string;
   title: string;
@@ -60,7 +73,7 @@ export interface MetaData {
   description?: string;
 
   openGraph?: MetaDataOpenGraph;
-  twitter?: MetaDataTwitter;
+  mastodon?: MetaDataMastodon;
 }
 
 export interface MetaDataRobots {
@@ -82,10 +95,9 @@ export interface MetaDataOpenGraph {
   type?: string;
 }
 
-export interface MetaDataTwitter {
-  handle?: string;
-  site?: string;
-  cardType?: string;
+export interface MetaDataMastodon {
+  statusId?: string;
+  instanceUrl?: string;
 }
 
 export interface Image {

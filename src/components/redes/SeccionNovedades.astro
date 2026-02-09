@@ -1,0 +1,26 @@
+---
+import BlogList from '~/components/redes/List.astro';
+import Headline from '~/components/blog/Headline.astro';
+import { redes } from '~/utils/servicios';
+import Note from '~/components/widgets/Note.astro';
+
+const redesNovedades = redes.filter((r) => r.category === 'novedades');
+---
+<section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+  <Headline
+    subtitle="Gestiona eventos y sigue novedades desde la comodidad de tus aplicaciones favoritas gracias al poder de los estándares abiertos como el RSS"
+    >Redes de Eventos y Novedades</Headline
+  >
+  <Note
+    title="¿Qué es RSS?"
+    icon="tabler:rss"
+    className="mb-12 md:mb-20"
+    description="<p>RSS es un estándar abierto para seguir novedades de sitios web. Cada vez que veas este símbolo, sabrás que un sitio es compatible con RSS y podrás seguirlo desde tu lector de preferencia.</p><p class='mt-4'>Desde la asociación estamos actualmente trabajando en recursos para acercar RSS a personas sin perfil tecnológico y para facilitar que aprendan a aprovechar su potencial.</p>"
+  />
+  <BlogList redes={redesNovedades} />
+  <Note
+    title="¿Buscas más sitios para seguir?"
+    icon="tabler:info-square"
+    description="<p>Si buscas más sitios para nutrir tu lector de RSS un buen sitio para empezar es la selección de blogs personales en castellano de <a class='hover:underline text-accent' href='https://blogblog.es/'>¡Blog!¡Blog!</a></p>"
+  />
+</section>

@@ -1,6 +1,5 @@
 ---
 import Grid from '~/components/blog/Grid.astro';
-
 import { getBlogPermalink } from '~/utils/permalinks';
 import { redes, shuffle } from '~/utils/servicios';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
@@ -27,6 +26,8 @@ const {
   classes = {},
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
+
+const redesDestacadas = shuffle(redes.filter((r) => r.destacada))
 ---
 <WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container as string} bg={bg}>
   <div class="flex flex-col lg:justify-between lg:flex-row mb-8">
@@ -48,5 +49,5 @@ const {
     {information && <p class="text-muted dark:text-slate-400 lg:text-sm lg:max-w-md" set:html={information} />}
   </div>
 
-  <Grid posts={shuffle(redes)} />
+  <Grid posts={redesDestacadas} />
 </WidgetWrapper>

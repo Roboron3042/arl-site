@@ -11,14 +11,15 @@ metadata:
   title:
     default: Redes Libres
     template: '%s — Redes Libres'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "Libérate de las redes sociales y de mensajería de las grandes corporaciones tecnológicas con la ayuda de la Asociación Redes Libres."
   robots:
     index: true
     follow: true
   openGraph:
     site_name: Redes Libres
     images:
-      - url: '~/assets/images/default.png'
+      - url: 'https://arl.red/_image?href=%2F_astro%2Fredeslibres_banner.BX5KiCZk.png'
+      #- url: '~/assets/images/redeslibres_banner.png'
         width: 1200
         height: 628
     type: website

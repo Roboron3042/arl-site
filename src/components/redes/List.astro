@@ -1,0 +1,20 @@
+---
+import Item from '~/components/redes/ListItem.astro';
+import type { Red } from '~/types';
+
+export interface Props {
+  redes: Array<Red>;
+}
+
+const { redes } = Astro.props;
+---
+
+<ul>
+  {
+    redes.map((red) => (
+      <li class="mb-12 md:mb-20">
+        <Item red={red} />
+      </li>
+    ))
+  }
+</ul>

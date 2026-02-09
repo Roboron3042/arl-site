@@ -2,12 +2,14 @@
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import ListaServidores from '~/components/widgets/ListaServidores.astro';
+import Note from '~/components/widgets/Note.astro';
 import Layout from '~/layouts/PageLayout.astro';
+
+export const prerender = false;
 
 const metadata = {
   title: 'Redes Libres',
@@ -16,17 +18,15 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
 
   <Hero
     actions={[
       {
         variant: 'primary',
         text: 'Únete a las redes libres',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
+        href: '#servidores',
       },
-      { text: 'Aprender más', variant: 'link' ,href: '#informacion' },
+      { text: 'Aprender más', variant: 'link', href: '/redes/todas' },
     ]}
   >
     <!-- image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }} -->
@@ -38,17 +38,14 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span>
-        En una era en la que unas pocas corporaciones tecnológicas dominan lo que podemos ver y hacer en sus plataformas,
-        las redes libres son nuestra oportunidad de democratizar las redes y devolverlas a manos de las personas que las habitan.
+        En una era en la que unas pocas corporaciones tecnológicas dominan lo que podemos ver y hacer en sus
+        plataformas, las redes libres son nuestra oportunidad de democratizar las redes y devolverlas a manos de las
+        personas que las habitan.
       </span>
     </Fragment>
   </Hero>
 
-  <!-- Features Widget *************** -->
-
-  <ListaServidores />
-
-  <!-- Content Widget **************** -->
+  <ListaServidores id="servidores" linkUrl={"/redes/todas"} />
 
   <Content
     isReversed
@@ -58,10 +55,10 @@ const metadata = {
       {
         title: 'Descentralizadas',
         description:
-          'Están compuestas de muchos proveedores independientes, en lugar de una sola empresa que asume el control de toda la red. Cada proveedor tiene sus reglas, y si no encajan contigo siempre puedes escoger otro.',
+          'Están compuestas de muchos proveedores independientes, en lugar de una sola empresa que asume el control de toda la red. Cada proveedor tiene sus reglas y condiciones, y eres libre de escoger el que más se adapte a ti.',
       },
       {
-        title: 'Federadas',
+        title: 'Interoperables',
         description:
           'Funcionan gracias a un lenguaje común que permite a los diferentes proveedores y aplicaciones que las componen comunicarse entre sí.',
       },
@@ -77,7 +74,9 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Características de las redes libres</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Características de las redes libres
+      </h3>
       Son libres aquellas redes (sociales, de mensajería, etc) que son:
     </Fragment>
 
@@ -86,24 +85,22 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
   <Content
     isAfterContent
     items={[
       {
         title: 'Son un monopolio',
-        description: `Están controladas por una única corporación que decide lo que se permite o no en su plataforma.`,
+        description: `Están controladas por una única corporación que decide lo que se permite o no en su plataforma, a menudo sin tener en cuenta las necesidades de minorías y colectivos vulnerables.`,
       },
       {
         title: 'Estamos encerrados en ellas',
         description:
-          'Lo que pasa en su plataforma, se queda en su plataforma. El contenido no es accesible libremente desde otras redes y pertenece a la corporación.',
+          'Lo que pasa en su plataforma, se queda en su plataforma. Tu contenido no es accesible libremente y pertenece a la corporación, que lo explota para beneficiarse.',
       },
       {
         title: 'No son auditables',
         description:
-          "No podemos saber cómo funcionan sus algoritmos, que a menudo se usan para manipular lo que ves.",
+          'No podemos saber cómo funcionan sus algoritmos, que frecuentemente utilizan mecanismos de adicción y de manipulación.',
       },
     ]}
     image={{
@@ -119,30 +116,29 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Features2 Widget ************** -->
-
   <Features2
     title="Tipos de redes libres"
-    subtitle="Para liberar tus redes sociales o de mensajería"
     items={[
       {
-        title: 'El Fediverso',
-        description: "Las redes sociales, de nuevo en nuestras manos. Comparte publicaciones, fotos o vídeos con tus seguidores en el Fediverso.",
-        icon: 'flat-color-icons:template',
-        callToAction: { text: "Descubre el Fediverso", variant: "link"}
-      },
-      {
-        title: 'El correo electrónico',
+        title: 'Redes sociales',
         description:
-          "Este veterano de la mensajería aún tiene mucho que ofrecer. Descubre su lado más moderno gracias a Delta Chat.",
-        icon: 'flat-color-icons:gallery',
-        callToAction: { text: "Descubre Delta Chat", variant: "link"}
+          'Las redes sociales, de nuevo en nuestras manos. Comparte publicaciones, fotos o vídeos con tus seguidores en el Fediverso.',
+        icon: 'flat-color-icons:address-book',
+        callToAction: { text: 'Descubre el Fediverso', variant: 'link', href: '/redes/sociales' },
       },
       {
-        title: 'XMPP',
-        description: 'La red libre de mensajería por excelencia tiene un nombre, aunque cuesta un poco pronunciarlo.',
-        icon: 'flat-color-icons:approval',
-        callToAction: { text: "Descubre XMPP", variant: "link"}
+        title: 'Mensajería',
+        description:
+          'Desde el veterano correo electrónico hasta opciones modernas como Delta Chat, libera tus comunicaciones de las corporaciones.',
+        icon: 'flat-color-icons:sms',
+        callToAction: { text: 'Descubre Delta Chat', variant: 'link', href: '/redes/mensajeria' },
+      },
+      {
+        title: 'Eventos y novedades',
+        description:
+          '¿Te imaginas poder seguir novedades de cualquier sitio de noticias o blog donde y como quieras? RSS lo hace posible.',
+        icon: 'flat-color-icons:template',
+        callToAction: { text: 'Descubre RSS', variant: 'link', href: '/redes/novedades' },
       },
     ]}
   >
@@ -151,12 +147,15 @@ const metadata = {
     </Fragment>
   </Features2>
 
-  <!-- Features Widget *************** -->
-
   <Features
     id="asociacion"
     title="Quiénes somos"
-    subtitle='La Asociación Redes Libres, una agrupación de proveedores cuyo objetivo es impulsar las redes libres que cumplan los siguientes principios.'
+    subtitle="La Asociación Redes Libres es una agrupación de proveedores de servicios libres cuyo objetivo es impulsar las redes libres que cumplan los siguientes principios"
+    callToAction1={{
+      variant: 'link',
+      text: 'Aprende más sobre nosotrs',
+      href: '/asociacion/objetivos',
+    }}
     items={[
       {
         title: 'Comunidad',
@@ -185,73 +184,26 @@ const metadata = {
     ]}
   />
 
-  <!-- HighlightedPosts Widget ******* -->
+  <Note description="Aprende más sobre la <a href='/asociacion/objetivos' class='hover:underline text-accent' >Asociación Redes Libres</a>" />
+  <p class="w-full text-center text-accent intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"></p>
 
-  <BlogLatestPosts
-    title="Blog de Redes Libres"
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
+  <BlogLatestPosts title="Blog de Redes Libres" />
 
   <CallToAction
     actions={[
       {
         variant: 'primary',
         text: 'Contribuir',
-        href: 'https://liberapay.com/mastoes',
-        target: '_blank',
+        href: '/contribuir',
         icon: 'tabler:heart-handshake',
       },
     ]}
   >
-    <Fragment slot="title">
-      Posible gracias a ti
-    </Fragment>
+    <Fragment slot="title"> Posible gracias a ti </Fragment>
 
     <Fragment slot="subtitle">
       Las redes libres existen gracias a las personas que las mantienen.
-      <br>Considerar contribuir o involucrarte para ayudar a que siga siendo así.
+      <br />Considerar contribuir o involucrarte para ayudar a que siga siendo así.
     </Fragment>
   </CallToAction>
 </Layout>
