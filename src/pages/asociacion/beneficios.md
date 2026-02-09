@@ -40,6 +40,9 @@ Nuestro servidor de Nextcloud [nube.arl.red](https://nube.arl.red) nos permite s
 ## Preguntas frecuentes
 ¿Aún tienes dudas sobre formar parte de Redes Libres? Aquí tienes algunas respuestas a las cuestiones que nos plantean con más frecuencia.
 
+### ¿Tengo que pagar una cuota por pertenecer a la ARL?
+No, la ARL se financia exclusivamente a través de las donaciones de las personas que disfrutan sus servicios. Las personas socias no están obligadas a pagar ninguna cuota.
+
 ### ¿Puedo formar parte de la ARL sin que eso menoscabe la independencia de mis servicios?
 Sí, la ARL garantiza la autonomía de sus Grupos de Trabajo y no se involucra en la gestión de sus servicios (salvo que sea legalmente requerido). Para garantizar también la independencia económica de aquellos Grupos de Trabajo que lo prefieran, la ARL distingue entre Grupos de Trabajo Contributivos y No Contributivos, eximiendo a estos últimos de cualquier responsabilidad económica para con la asociación.
 
