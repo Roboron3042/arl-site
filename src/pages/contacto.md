@@ -12,7 +12,7 @@ Puedes enviar a la Asociación Redes Libres tus consultas, sugerencias o peticio
 
 ### Redes sociales
 
-Puedes contactarnos en las redes sociales del Fediverso (Mastodon, Misskey, Pixelfed, etc) mencionando a la cuenta de la asociación [@redeslibres@masto.es](https://masto.es/@redeslibres)
+Puedes contactarnos en las redes sociales del Fediverso (Mastodon, Misskey, Pixelfed, etc) mencionando a la cuenta de la asociación: [@RedesLibres@masto.es](https://masto.es/@RedesLibres)
 
 ## Contactar con los Grupos de Trabajo
 

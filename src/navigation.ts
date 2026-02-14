@@ -82,7 +82,7 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'Mastodon', icon: 'tabler:brand-mastodon', href: '#' },
+    { ariaLabel: 'Mastodon', icon: 'tabler:brand-mastodon', href: 'https://masto.es/@RedesLibres' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/arthelokyo/astrowind' },
   ],
