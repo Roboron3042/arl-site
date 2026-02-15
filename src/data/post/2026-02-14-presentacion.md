@@ -7,9 +7,9 @@ category: Asociación
 tags:
   - noticias
   - redes libres
-#metadata:
-#  mastodon:
-#    statusId: "116034687285325395"
+metadata:
+  mastodon:
+    statusId: "116070370915517586"
 ---
 
 Tras meses de preparación hoy presentamos al público Redes Libres, una iniciativa conjunta para impulsar las redes libres, garantizar su sostenibilidad y facilitar la colaboración entre los diferentes proveedores de redes libres en el mundo hispanohablante.

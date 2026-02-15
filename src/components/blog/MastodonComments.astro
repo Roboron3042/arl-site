@@ -24,6 +24,8 @@ function stripHtml(html: string) {
   // Basic HTML stripping for display name - you might want a more robust solution
   return html.replace(/<[^>]*>/g, '');
 }
+
+export const prerender = false;
 ---
 
 <section class="mx-auto">
