@@ -2,6 +2,7 @@ import type { Red } from '~/types';
 import mastoes_img from '~/assets/images/servidores/mastoes.png';
 import neopaquita_img from '~/assets/images/servidores/neopaquita.png';
 import enredades_img from '~/assets/images/servidores/enredades.png';
+import hortensias_img from '~/assets/images/servidores/hortensias.png';
 import fotolibre_img from '~/assets/images/servidores/fotolibre.jpg';
 import redeslibres_banner from '~/assets/images/redeslibres_banner.png';
 
@@ -32,6 +33,17 @@ export const redes: Red[] = [
     excerpt:
       'Instancia transfeminista en la red de Mastodon hispano. Espacio seguro para mujeres, gente del espectro queer y aliada.',
     image: neopaquita_img,
+    category: 'microblog',
+    tags: ['mastodon', 'fediverso', 'microblog', 'lgbt+'],
+    destacada: true,
+  },
+  {
+    id: 'hortensias.social',
+    title: 'Hortensias',
+    permalink: 'https://hortensia.social',
+    excerpt:
+      'Espacio seguro para personas trans y no binarias, y para quienes quieran ser aliadas en sus luchas.',
+    image: hortensias_img,
     category: 'microblog',
     tags: ['mastodon', 'fediverso', 'microblog', 'lgbt+'],
     destacada: true,

@@ -50,3 +50,13 @@ Los Grupos de Trabajo No Contributivos no tienen la obligación de contribuir al
     - Fediverso: [@xabih@neopaquita.es](https://neopaquita.es/@xabih)
 - Cargos de su representante en la Comisión de Representantes:
     - Vocalía de FotoLibre
+
+### Hortensias
+- Redes y servicios mantenidos:
+    - [Hortensias (Mastodon)](https://hortensia.social)
+- Canales de donación: No acepta donaciones.
+- Contacto:
+    - Correo electrónico: [hortensia@lainterseccion.net](mailto:hortensia@lainterseccion.net)
+    - Fediverso: [@comunidad@hortensia.social](https://hortensia.social/@comunidad)
+- Cargos de su representante en la Comisión de Representantes:
+    - Vocalía de Hortensias
