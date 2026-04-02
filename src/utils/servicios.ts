@@ -6,7 +6,7 @@ import hortensias_img from '~/assets/images/servidores/hortensias.png';
 import fotolibre_img from '~/assets/images/servidores/fotolibre.jpg';
 import redeslibres_banner from '~/assets/images/redeslibres_banner.png';
 
-export function shuffle(array) {
+export function shuffle(array: Red[]): Red[] {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
