@@ -20,7 +20,7 @@ Proyecto Hortensias es un grupo de personas que colaboran para apoyar los derech
 Hortensias se une a la Asociación Redes Libres como Grupo de Trabajo No Contributivo, de forma que participará en nuestras iniciativas sin vincularse económicamente con la asociación. Esperamos que esta colaboración sea beneficiosa para ambas partes, y que la experiencia que puede ofrecer Hortensias a Redes Libres y viceversa fortalezca nuestra capacidad para cumplir nuestro objetivo común de impulsar el desarrollo de redes soberanas e inclusivas.
 
 ## Casa Tia Julia será nuestro domicilio social
-La Asamblea General también aprobó que nuestro domicilio social esté situado en [Casa Tia Julia](https://casatiajulia.com/) situada en Calle Placetilla 8, Ciria (Soria). Un refugio de ideas en una casa de pueblo que contrasta con las oficinas corporativas que puedes encontrar en las grandes ciudades.
+La Asamblea General también aprobó que nuestro domicilio social esté situado en [Casa Tia Julia](https://casatiajulia.com/) (Soria). Un refugio de ideas en una casa de pueblo que contrasta con las oficinas corporativas que puedes encontrar en las grandes ciudades.
 
 Como una asociación que trata de construir alternativas a las redes corporativas, no se nos ocurre un espacio mejor al que poder llamar nuestra casa.
 
