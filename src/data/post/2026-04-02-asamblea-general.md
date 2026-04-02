@@ -7,6 +7,9 @@ category: Asociación
 tags:
   - noticias
   - redes libres
+metadata:
+  mastodon:
+    statusId: "116335900324195686"
 ---
 
 La primera Asamblea General de la Asociación Redes Libres se celebró este lunes 30 de marzo de 2026. En ella se recogieron importantes acuerdos para seguir avanzando en la construcción de Redes Libres, como la admisión de un nuevo Grupo de Trabajo.
