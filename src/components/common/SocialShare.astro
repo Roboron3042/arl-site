@@ -13,13 +13,13 @@ const { text, url, mastodon } = Astro.props;
 
 const mastodonUrl = mastodon?.statusId
   ? `${mastodon?.instanceUrl ?? 'https://masto.es'}/statuses/${mastodon.statusId}`
-  : `https://mastodonshare.com?text=${text} ${url}`;
+  : `https://share.joinmastodon.org/#text=${text} ${url}`;
 ---
 
 <div class="flex items-center">
   <span class="align-super font-bold text-slate-500 dark:text-slate-400">Compartir:</span>
-  <a href={mastodonUrl} class="ml-2 rtl:ml-0 rtl:mr-2" title="Compartir con Mastodon"
-    ><Icon
+  <a href={mastodonUrl} target="_blank" rel="noopener" class="ml-2 rtl:ml-0 rtl:mr-2">
+    <Icon
       name="tabler:brand-mastodon"
       class="w-6 h-6 text-gray-400 dark:text-slate-500 hover:text-black dark:hover:text-slate-300"
     />
