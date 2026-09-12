@@ -2,7 +2,7 @@
 publishDate: 2026-09-12T00:00:00Z
 title: 'La Colección de Bienvenida a Mastodon'
 excerpt: 'Presentamos una Colección de cuentas variadas para ayudar a las nuevas usuarias a iniciarse a Mastodon y el Fediverso'
-image: '~/assets/images/servidores/hortensias.png'
+image: '~/assets/images/servidores/mastoes.png'
 category: Fediverso
 tags:
   - mastodon
