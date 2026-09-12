@@ -8,7 +8,7 @@ tags:
   - mastodon
 metadata:
   mastodon:
-    statusId: "116335900324195686"
+    statusId: "117258997208080891"
 ---
 
 En junio de este año, [el equipo de Mastodon lanzó la versión 4.6](https://blog.joinmastodon.org/2026/06/mastodon-4.6/), cuya principal novedad fue la creación de Colecciones. Desde Redes Libres hemos aprovechado esta nueva función para elaborar una [Colección de Bienvenida](https://masto.es/collections/117247473242718762) dirigida a mejorar la experiencia inicial de las recién llegadas.
